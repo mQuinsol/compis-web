@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compis - Diversión sin límites</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a class="whatsapp-float" onclick="toggleChatWA()">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+
+        <div class="wa-header">
+            ⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐
+        </div>
+
+        <div class="wa-body" id="chatBody">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button onclick="enviarMensaje()">Enviar</button>
+                </div>
+                <!-- Sección de llamada directa -->
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34600000000" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="./assets/logos/logo.webp" alt="Compis">
+        </div>
+
+        <button class="tour-btn">TOUR VIRTUAL</button>
+
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+  <header class="hero">
+        <div class="hero-content">
+            <h1 class="capsule-text">
+                “Diversión sin límites para ellos, tranquilidad total para ti.”
+            </h1>
+        </div>
+  </header>
+
+    <section class="intro-description">
+        <div class="container">
+            <p>
+                Servicio de cuidado y acceso por horas,  Campamentos,  Cumpleaños a medida,  Fiestas inolvidables, 
+                Talleres &nbsp;y  mucho &nbsp;más &nbsp;en &nbsp;300 m² &nbsp;de &nbsp;juego &nbsp;seguro, 
+                &nbsp;con zona &nbsp;para &nbsp;adultos&nbsp; y&nbsp; vistas &nbsp;al&nbsp; mar.<br>
+                Un espacio pensado para conciliar y disfrutar todos juntos.</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+
+        <div class="gallery-bg"></div>
+        
+        <button class="arrow left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="gallery-track">
+            
+            <div class="card side far-left">
+                <img src="./assets/img/carrusel/IMG1.jpg">
+            </div>
+
+            <div class="card side left">
+                <img src="./assets/img/carrusel/IMG2.jpeg">
+            </div>
+
+            <div class="card active">
+                <img src="./assets/img/carrusel/IMG3.jpeg">
+            </div>
+
+            <div class="card side right">
+                <img src="./assets/img/carrusel/IMG4.jpeg">
+            </div>
+
+            <div class="card side far-right">
+                <img src="./assets/img/carrusel/IMG5.jpg">
+            </div>
+
+        </div>
+
+        <button class="arrow right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </section>
+
+    <section class="what-we-do">
+        <h2>¿QUÉ HACEMOS?</h2>
+
+        <div class="wwd-grid">
+            <article class="wwd-card">
+                <img src="./assets/icons/icon1.webp" alt="Juego por horas">
+                <h3>Juego por horas</h3>
+                <p> Acceso libre por horas a todas las zonas de juego,
+                todo el tiempo que necesitéis.<br> A partir de los 3 años
+                podéis dejarlos solos con nosotras. Estarán siempre supervisados.</p>
+            </article>
+
+            <article class="wwd-card">
+                <img src="./assets/icons/icon2.webp" alt="Campamentos">
+                <h3>Campamentos</h3>
+                <p>Durante el período vacacional y los días sin cole
+                organizamos actividades, talleres y excursiones.
+                La opción perfecta para conciliar mientras hacen amigos y se mantienen activos.</p>
+            </article>
+
+            <article class="wwd-card">
+                <img src="./assets/icons/icon3.webp" alt="Cumpleaños">
+                <h3>Cumpleaños</h3>
+                <p>Celebramos cumpleaños con actividades a elegir para
+                que vivan un día inolvidable. Nos ocupamos de todo
+                para que vosotros solo tengáis que disfrutar y pasarlo en grande.</p>
+            </article>
+
+            <article class="wwd-card">
+                <img src="./assets/icons/icon4.webp" alt="Fiestas y eventos">
+                <h3>Fiestas y eventos</h3>
+                <p>Organizamos fiestas temáticas, diurnas y nocturnas,
+                con gincanas y juegos para que vivan una gran experiencia.
+                Ofrecemos servicio de acompañamiento en eventos particulares.</p>
+            </article>
+        </div>
+
+        <div class="Formulario">
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email (opcional)">
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="button" onclick="enviarMensaje()">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="opinions">
+            <h2>Opiniones de Nuestros Clientes</h2>
+            <div class="opinion-card">
+                <p>"¡Una experiencia increíble! Mi hijo se divirtió muchísimo y yo pude relajarme sabiendo que estaba en un lugar seguro."</p>
+                <span>- María G.</span>
+            </div>
+            <div class="opinion-card">
+                <p>"El personal es muy amable y atento. El espacio es perfecto para que los niños jueguen mientras los adultos disfrutan de las vistas al mar."</p>
+                <span>- Carlos M.</span>
+            </div>  
+    </section>
+
+    <section>
+        <div class="footer">
+            <p>&copy; 2024 Compis. Todos los derechos reservados.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>  
+        </div>
+    </section>
+  <script src="./js/script.js"></script>
+</body>
+</html>

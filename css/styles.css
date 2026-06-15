@@ -1,0 +1,860 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+/* =========================
+   RESETEO Y BASE
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* =========================
+   VERSION MÓVIL (Base)
+   ========================= */
+
+/* HERO */
+.hero {
+  margin-top: 70px;
+  width: 100%;
+  height: 40vh;
+  background-image: url("../assets/bg/ppal.jpg");
+  background-size: cover;
+  background-position: 65% center;
+  position: relative;
+}
+
+/* NAVBAR CON EFECTO CRISTAL */
+.navbar {
+  width: 100%;
+  padding: 10px 15px;
+  background: rgba(236, 247, 255, 0.75);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255,255,255,.5);
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height:70px;
+  z-index: 9999;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container img{
+  width: 105px;
+  padding-top: 8px;
+}
+
+.logo-container img {
+  width: 115px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 6px rgba(255,255,255,0.9))
+    drop-shadow(0 4px 12px rgba(0,0,0,0.12));
+
+  transition: 0.3s ease;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.socials i {
+  font-size: 32px;
+  /* Eliminé el text-shadow blanco fuerte para que el degradado de IG se vea nítido */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); 
+  transition: 0.2s ease;
+}
+
+.socials a:hover i {
+  transform: scale(1.1);
+}
+
+.fa-whatsapp {
+  background: radial-gradient(circle at 30% 30%, #a3f5be 0%, #25D366 45%, #128C7E 90%);
+  -webkit-background-clip: text; 
+  background-clip: text;         /* ✨ Añádela también aquí para evitar el mismo aviso */
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text; /* Para Safari y Chrome antiguos */
+  background-clip: text;         /* ✨ La propiedad estándar que te pide el editor */
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.tour-btn {
+  border: 1px solid rgba(255,255,255,.45);
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #76b475;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.menu {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+  cursor:pointer;
+  z-index:1001;
+}
+
+.menu span {
+  width: 100%;
+  height: 3px;
+  background: rgba(60, 60, 60, 0.65);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* CHAT */
+
+.wa-chatbox {
+    position: fixed;
+    bottom: 120px;
+    left: 15px;   /* Se estira de manera fluida en pantallas móviles */
+    right: 15px;  
+    background: #c2d7ec;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    z-index: 10000;
+    display: none; /* Controlado por JS toggleChatWA() */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    gap: 0;
+    height: auto;
+}
+
+.wa-header {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-family: "Sunborn", system-ui, sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 3px #2b2b2b;
+    font-weight: 600;
+    height: auto;   
+    max-height: 60vh;
+    justify-content: flex-start;
+}
+
+.wa-body {
+    padding: 16px;
+    max-height: 60vh;
+    overflow-y: auto;
+    background-color: #c2d7ec;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    height: auto;
+}
+
+.whatsapp-float {
+    position:fixed;
+    right:8px;
+    bottom:30px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgb(255, 255, 255);
+    border:3px solid #25D366;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18),
+        0 3px 8px rgba(0,0,0,.12);
+
+    z-index:9999;
+}
+
+.whatsapp-float i{
+     color:#25D366;
+    font-size:34px;
+    line-height:1;
+}
+
+.wa-help-bubble {
+    display:none;
+}
+/* BOT */
+
+.bot {
+    background: #ffffff;
+    color: #333333;
+    padding: 12px;
+    border-radius: 0px 12px 12px 12px; 
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 90%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    align-self: flex-start;
+}
+
+.bot-menu {
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 14px;   /* Un pelín más redondeado para darle suavidad */
+    padding: 18px;         /* Más aire dentro de la tarjeta para que respire */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bot-title {
+    font-size: 14px;
+    font-weight: 500;       /* Peso medio, muy elegante */
+    color: #334155;         /* Gris oscuro suave, menos agresivo que el negro */
+    line-height: 1.5;       /* Buen espacio entre líneas para que se lea bien */
+    text-transform: none;    /* ¡Ojo! Quitamos las mayúsculas fijas de antes */
+    letter-spacing: normal;  /* Reseteamos el espaciado de letras */
+}
+
+.bot-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+/* Caja de entrada de texto */
+textarea#waMessage {
+    width: 100%;
+    height: 85px;
+    padding: 12px;
+    border: 1px solid #cbd5e1; /* Gris claro estilo interfaz moderna */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+    background: #f8fafc;
+    margin-top: 0.8rem;
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+textarea#waMessage:focus {
+    border-color: #3b82f6; /* Se adapta al azul de tu cabecera */
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* Sutil halo de enfoque */
+}
+
+/* Botón de envío principal */
+.bot-item button {
+    background: #2563eb;    /* Azul cobalto premium */
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;      /* Reducimos el alto y le damos margen a los lados */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    /* El toque maestro: */
+    align-self: flex-end;   /* Obliga al botón a irse a la derecha y medir solo lo que ocupa su texto */
+    
+    transition: background 0.2s, transform 0.1s;
+}
+
+.bot-item button:hover {
+    background: #1d4ed8;
+}
+
+.bot-item button:active {
+    transform: scale(0.96); /* Efecto de hundido al pulsar */
+}
+
+/* Bloque de llamada directa */
+.bot-contacto-telefono {
+    border-top: 1px solid #f1f5f9; /* Línea divisoria muy fina */
+    padding-top: 14px;
+    text-align: center;
+}
+
+.bot-contacto-telefono p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0 0 6px 0;
+}
+
+/* Enlace/Botón de llamada */
+.bot-btn-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bot-btn-call:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* TEXTO CÁPSULA HERO */
+.hero-content {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-content h1 {
+  background: #76b475;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-family: "Chewy", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  white-space: nowrap;
+  width: max-content;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.15);
+  letter-spacing: 0.5px; 
+}
+
+/* --- SECCIÓN INTRO --- */
+.intro-description {
+  background-color: #ecf7ff;
+  padding: 25px 15px 15px;
+  text-align: center;
+}
+
+.intro-description p {
+  font-family: "Chewy", system-ui, sans-serif;
+  color: #1c5a1b;
+  font-size: 9.5px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 10px;
+}
+
+/* --- SECCIÓN CAROUSEL (FONDO VERDE) --- */
+.gallery-section{
+  position:relative;
+  overflow:hidden;
+
+  padding:40px 0 20px;
+ 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gallery-track{
+  position:relative;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+
+.gallery-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 45%,
+            #aed768 50%
+        ),
+        url("../assets/bg/fondo2.webp");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+}
+
+.card{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+
+  transition:0.4s ease;
+
+  cursor:pointer;
+}
+
+.card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card.side{
+  width: 85px;
+  height: 200px;
+
+  opacity:0.8;
+
+  transform:scale(0.92);
+
+  filter:
+    blur(1px)
+    brightness(0.92);
+}
+
+.card.side.far-left{
+  width:55px;
+  height:160px;
+
+  transform:
+    translateX(18px)
+    scale(0.78);
+
+  opacity:0.35;
+
+  z-index:1;
+}
+.card.side.left{
+  width:85px;
+  height:220px;
+
+  transform:
+    translateX(8px)
+    scale(0.9);
+
+  opacity:0.7;
+
+  z-index:2;
+}
+
+.card.side.right{
+  width:85px;
+  height:220px;
+
+  transform:
+    translateX(-8px)
+    scale(0.9);
+
+  opacity:0.7;
+
+  z-index:2;
+}
+
+.card.side.far-right{
+  width:55px;
+  height:160px;
+
+  transform:
+    translateX(-18px)
+    scale(0.78);
+
+  opacity:0.35;
+
+  z-index:1;
+}
+
+.card.active{
+  width: 150px;
+  height: 290px;
+
+  z-index:5;
+
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.arrow {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  z-index:20;
+
+  width:44px;
+  height:44px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.85);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.12);
+
+  backdrop-filter: blur(10px);
+}
+
+.arrow i{
+  font-size:20px;
+  color:#5a8a5a;
+}
+
+.arrow.left{
+  left:20px;
+}
+
+.arrow.right{
+  right:20px;
+}
+
+/* --- SECCIÓN QUÉ HACEMOS --- */
+
+.what-we-do {
+    background-color: #ecf7ff;
+    background-image: url('../assets/bg/cab_form.webp');
+    
+    /* Mantenemos la proporción original de la imagen */
+    background-size: contain; 
+    
+    /* La fijamos arriba para que las nubes y el corazón 
+       queden alineados cerca del título */
+    background-position: 50% 1.5rem;
+    
+    background-repeat: no-repeat;
+    
+    /* Ajusta el padding para que el contenido no tape la decoración de la imagen */
+    padding-top: 1.3rem; 
+    padding-bottom: rem;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-family: "Chewy", system-ui, sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    -webkit-text-stroke: 12px #008f39;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    -webkit-text-stroke: 8px #1e4620;
+    paint-order: stroke fill;
+
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wwd-grid {
+    display: grid;
+    /* 4 columnas siempre, pero muy compactas */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 0.2rem; /* Reducimos el hueco entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.2rem;
+    width: 100%;
+}
+
+.wwd-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+}
+
+.wwd-card img {
+    width: 100%;            /* Permite que use el máximo del contenedor controlado por max-width */
+    max-width: 35px;       /* Controlas el tamaño real visual (puedes subirlo a 120px si las ves pequeñas) */
+    height: 35px;          /* Forzamos una altura fija para que todos los títulos empiecen exactamente en la misma línea */
+    object-fit: contain;    /* Mantiene la proporción de la ilustración de Canva sin deformarla */
+    object-position: bottom center; /* Apoya las imágenes en la base para que visualmente tengan coherencia */
+    margin-bottom: 0.2rem;
+    
+    /* Truco de renderizado para imágenes con transparencias/bordes suaves */
+    image-rendering: -webkit-optimize-contrast; 
+    transform: translateZ(0); /* Fuerza aceleración por hardware para suavizar bordes */
+}
+
+.wwd-card h3 {
+    font-family: "Sunborn", system-ui, sans-serif;
+    font-size: 0.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+    line-height: 1;
+    word-break: break-word;
+    text-align: center;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 1px #2b2b2b;
+}
+
+.wwd-card p {
+    font-family: "Chewy", system-ui, sans-serif;
+    font-size: 0.55rem;
+    color: #4a753c;
+    line-height: 1.1;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 2px;;
+    margin-top: 0.4rem;
+     /* Para asegurar que el texto se centre debajo del título incluso si es más corto */
+}
+
+
+/* --- Formulario --- */
+.Formulario { /* El fondo azul claro de tu web */
+    padding: 5.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: none;
+    background-image: url('../assets/bg/form2.webp');
+    background-size: cover;
+    background-position: center center;
+    background-size:105%  95%;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- TÍTULO DE LA SECCIÓN --- */
+.Formulario h2 {
+    font-family: "Chewy", system-ui, sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+    paint-order: stroke fill;
+    -webkit-text-stroke: 8px #1e4620; /* Tu verde oscuro característico */
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- LA TARJETA BLANCA (El contenedor del Form) --- */
+.Formulario form {  
+  background-color:transparent !important; /* Fondo transparente para que se vea la marca de agua */
+  padding: 1.5rem 1rem;
+  border-radius: 4px; /* Bordes sutiles como en la captura */
+  width: 100%;
+  max-width: 550px; /* Ancho máximo para que no se estire demasiado */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Sombra muy suave */
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem; /* Espaciado uniforme entre los inputs */
+  
+  /* TRUCO: Posicionamiento relativo para la marca de agua de fondo */
+  position: relative;
+  z-index: 1;
+}
+
+/* --- MARCA DE AGUA (Arcoíris de fondo en el formulario) --- */
+.Formulario form::before {
+    content: "";
+    position: absolute;
+    
+    /* Centramos el contenedor al 100% del formulario */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Ruta de la imagen */
+    background: #ffffff url('../assets/img/fondo_form.webp');
+    background-repeat: no-repeat;
+    
+    /* Clave: Centrar la imagen dentro del formulario */
+    background-position: center center;
+    
+    /* Clave: 'contain' hará que la imagen se vea completa 
+       sin importar el tamaño del formulario */
+    background-size: contain;
+    
+    /* Opacidad y capas */
+    opacity: 0.3; 
+    z-index: -1; 
+    pointer-events: none;
+    
+    /* Quita el borde rojo una vez que confirmes que se ve la imagen */
+    /* border: 2px dashed red; */ 
+}
+
+/* --- ESTILO DE LOS INPUTS Y TEXTAREA --- */
+.Formulario form input,
+.Formulario form textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-family: system-ui, sans-serif; /* Tipografía limpia para los datos */
+    font-size: 0.95rem;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para que deje ver el fondo */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Color del placeholder gris suave */
+.Formulario form input::placeholder,
+.Formulario form textarea::placeholder {
+    color: #9c9c9c;
+}
+
+/* Enfoque al hacer clic en un campo */
+.Formulario form input:focus,
+.Formulario form textarea:focus {
+    border-color: #e2b442; /* Cambia al color dorado del botón al escribir */
+}
+
+/* Tamaño fijo para el cuadro de mensaje */
+.Formulario form textarea {
+    height: 90px;
+    resize: none; /* Evita que el usuario lo deforme */
+}
+
+/* --- BOTÓN ENVIAR --- */
+.Formulario form button {
+    width: 100%;
+    background-color: #e2b442; /* El amarillo/dorado tostado de tu captura */
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    font-family: "Chewy", system-ui, sans-serif; /* Tu fuente divertida */
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    border-radius: 25px; /* Botón completamente redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 0.2rem;
+}
+
+/* Efectos para el botón */
+.Formulario form button:hover {
+    background-color: #d1a333; /* Un punto más oscuro al pasar el ratón */
+}
+
+.Formulario form button:active {
+    transform: scale(0.98); /* Pequeño efecto de hundido al pulsar */
+}
+
+/* =========================
+   VERSION ESCRITORIO (Desktop)
+   ========================= */
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+  .navbar {
+    padding: 15px 60px;
+  }
+  .logo-container img {
+    width: 120px;
+  }
+  .nav-actions {
+    gap: 25px;
+  }
+  .socials i {
+    font-size: 35px;
+  }
+  .tour-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    padding: 20px 50px;
+  }
+
+  .intro-description p {
+    font-size: 1.3rem;
+    max-width: 900px;
+  }
+
+}
+@media (min-width: 480px) {
+    .wa-chatbox {
+        bottom: 100px; /* Asegúrate de actualizarlo también aquí para las pantallas de PC */
+        left: auto;       
+        right: 20px;      
+        width: 360px;     
+    }
+    
+    .wa-body {
+        max-height: 65vh; /* En pantallas grandes nos podemos estirar un poco más */
+    }
+}
+@media (min-width: 600px) {
+    .wwd-grid { gap: 1.5rem; } /* Más aire cuando hay espacio */
+    .wwd-card img {
+        max-width: 80px;
+        height: 80px;
+    }
+    .wwd-card h3 { font-size: 0.8rem; }
+    .wwd-card p { 
+        display: block;
+        font-size: 0.7rem; 
+    }
+}
