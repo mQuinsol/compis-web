@@ -32,17 +32,13 @@ body {
   position: relative;
 }
 
-/* NAVBAR CON EFECTO CRISTAL */
 .navbar {
   width: 100%;
   padding: 10px 15px;
   background: rgba(236, 247, 255, 0.75);
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   border-bottom: 1px solid rgba(255,255,255,.5);
-
   box-shadow:
     0 4px 20px rgba(0,0,0,.08);
   display: flex;
@@ -53,12 +49,6 @@ body {
   left: 0;
   height:70px;
   z-index: 9999;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
 .logo-container img{
@@ -84,7 +74,6 @@ body {
 
 .socials i {
   font-size: 32px;
-  /* Eliminé el text-shadow blanco fuerte para que el degradado de IG se vea nítido */
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); 
   transition: 0.2s ease;
 }
@@ -96,15 +85,15 @@ body {
 .fa-whatsapp {
   background: radial-gradient(circle at 30% 30%, #a3f5be 0%, #25D366 45%, #128C7E 90%);
   -webkit-background-clip: text; 
-  background-clip: text;         /* ✨ Añádela también aquí para evitar el mismo aviso */
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 .fa-instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text; /* Para Safari y Chrome antiguos */
-  background-clip: text;         /* ✨ La propiedad estándar que te pide el editor */
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -142,72 +131,66 @@ body {
 /* CHAT */
 
 .wa-chatbox {
-    position: fixed;
-    bottom: 120px;
-    left: 15px;   /* Se estira de manera fluida en pantallas móviles */
-    right: 15px;  
-    background: #c2d7ec;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    z-index: 10000;
-    display: none; /* Controlado por JS toggleChatWA() */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    gap: 0;
-    height: auto;
+  position: fixed;
+  bottom: 120px;
+  left: 15px;
+  right: 15px;  
+  background: #c2d7ec;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  z-index: 10000;
+  display: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  gap: 0;
+  height: auto;
 }
 
 .wa-header {
-    background: #3b82f6;
-    color: #ffffff;
-    padding: 16px 20px;
-    font-family: "Sunborn", system-ui, sans-serif;
-    font-size: 0.9rem;
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-align: center;
-    paint-order: stroke fill;
-    -webkit-text-stroke: 3px #2b2b2b;
-    font-weight: 600;
-    height: auto;   
-    max-height: 60vh;
-    justify-content: flex-start;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 16px 20px;
+  font-family: "Sunborn", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 3px #2b2b2b;
+  font-weight: 600;
+  height: auto;   
+  max-height: 60vh;
+  justify-content: flex-start;
 }
 
 .wa-body {
-    padding: 16px;
-    max-height: 60vh;
-    overflow-y: auto;
-    background-color: #c2d7ec;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    justify-content: center;
-    height: auto;
+  padding: 16px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background-color: #c2d7ec;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  height: auto;
 }
 
 .whatsapp-float {
-    position:fixed;
-    right:8px;
-    bottom:30px;
-
-    width:58px;
-    height:58px;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:rgb(255, 255, 255);
-    border:3px solid #25D366;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.18),
-        0 3px 8px rgba(0,0,0,.12);
-
-    z-index:9999;
+  position:fixed;
+  right:8px;
+  bottom:30px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgb(255, 255, 255);
+  border:3px solid #25D366;
+  box-shadow:
+      0 10px 25px rgba(0,0,0,.18),
+      0 3px 8px rgba(0,0,0,.12);
+  z-index:9999;
 }
 
 .whatsapp-float i{
@@ -216,132 +199,108 @@ body {
     line-height:1;
 }
 
-.wa-help-bubble {
-    display:none;
-}
-/* BOT */
-
-.bot {
-    background: #ffffff;
-    color: #333333;
-    padding: 12px;
-    border-radius: 0px 12px 12px 12px; 
-    font-size: 14px;
-    line-height: 1.4;
-    max-width: 90%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
-    align-self: flex-start;
-}
-
 .bot-menu {
-    width: 100%;
-    box-sizing: border-box;
-    background: #ffffff;
-    border-radius: 14px;   /* Un pelín más redondeado para darle suavidad */
-    padding: 18px;         /* Más aire dentro de la tarjeta para que respire */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .bot-title {
-    font-size: 14px;
-    font-weight: 500;       /* Peso medio, muy elegante */
-    color: #334155;         /* Gris oscuro suave, menos agresivo que el negro */
-    line-height: 1.5;       /* Buen espacio entre líneas para que se lea bien */
-    text-transform: none;    /* ¡Ojo! Quitamos las mayúsculas fijas de antes */
-    letter-spacing: normal;  /* Reseteamos el espaciado de letras */
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .bot-item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
 }
 
-/* Caja de entrada de texto */
 textarea#waMessage {
-    width: 100%;
-    height: 85px;
-    padding: 12px;
-    border: 1px solid #cbd5e1; /* Gris claro estilo interfaz moderna */
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 14px;
-    resize: none;
-    box-sizing: border-box;
-    background: #f8fafc;
-    margin-top: 0.8rem;
-    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  height: 85px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: none;
+  box-sizing: border-box;
+  background: #f8fafc;
+  margin-top: 0.8rem;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
 textarea#waMessage:focus {
-    border-color: #3b82f6; /* Se adapta al azul de tu cabecera */
-    background: #ffffff;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* Sutil halo de enfoque */
+  border-color: #3b82f6;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/* Botón de envío principal */
 .bot-item button {
-    background: #2563eb;    /* Azul cobalto premium */
-    color: #ffffff;
-    border: none;
-    padding: 10px 24px;      /* Reducimos el alto y le damos margen a los lados */
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    
-    /* El toque maestro: */
-    align-self: flex-end;   /* Obliga al botón a irse a la derecha y medir solo lo que ocupa su texto */
-    
-    transition: background 0.2s, transform 0.1s;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
+  
+  transition: background 0.2s, transform 0.1s;
 }
 
 .bot-item button:hover {
-    background: #1d4ed8;
+  background: #1d4ed8;
 }
 
 .bot-item button:active {
-    transform: scale(0.96); /* Efecto de hundido al pulsar */
+  transform: scale(0.96);
 }
 
-/* Bloque de llamada directa */
 .bot-contacto-telefono {
-    border-top: 1px solid #f1f5f9; /* Línea divisoria muy fina */
-    padding-top: 14px;
-    text-align: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+  text-align: center;
 }
 
 .bot-contacto-telefono p {
-    font-size: 12px;
-    color: #64748b;
-    margin: 0 0 6px 0;
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 6px 0;
 }
 
-/* Enlace/Botón de llamada */
 .bot-btn-call {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: #2563eb;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .bot-btn-call:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
-/* TEXTO CÁPSULA HERO */
 .hero-content {
   position: absolute;
   bottom: 30px;
@@ -386,7 +345,7 @@ textarea#waMessage:focus {
   margin: 0 auto 10px;
 }
 
-/* --- SECCIÓN CAROUSEL (FONDO VERDE) --- */
+/* --- SECCIÓN CAROUSEL --- */
 .gallery-section{
   position:relative;
   overflow:hidden;
@@ -408,29 +367,27 @@ textarea#waMessage:focus {
 }
 
 .gallery-bg {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 
-    background:
-        linear-gradient(
-            to bottom,
-            transparent 45%,
-            #aed768 50%
-        ),
-        url("../assets/bg/fondo2.webp");
+  background:
+      linear-gradient(
+          to bottom,
+          transparent 45%,
+          #aed768 50%
+      ),
+      url("../assets/bg/fondo2.webp");
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
 }
 
 .card{
   position:relative;
   border-radius:20px;
   overflow:hidden;
-
   transition:0.4s ease;
-
   cursor:pointer;
 }
 
@@ -444,11 +401,8 @@ textarea#waMessage:focus {
 .card.side{
   width: 85px;
   height: 200px;
-
   opacity:0.8;
-
   transform:scale(0.92);
-
   filter:
     blur(1px)
     brightness(0.92);
@@ -457,66 +411,54 @@ textarea#waMessage:focus {
 .card.side.far-left{
   width:55px;
   height:160px;
-
   transform:
     translateX(18px)
     scale(0.78);
 
   opacity:0.35;
-
   z-index:1;
 }
 .card.side.left{
   width:85px;
   height:220px;
-
   transform:
     translateX(8px)
     scale(0.9);
 
   opacity:0.7;
-
   z-index:2;
 }
 
 .card.side.right{
   width:85px;
   height:220px;
-
   transform:
     translateX(-8px)
     scale(0.9);
 
   opacity:0.7;
-
   z-index:2;
 }
 
 .card.side.far-right{
   width:55px;
   height:160px;
-
   transform:
     translateX(-18px)
     scale(0.78);
 
   opacity:0.35;
-
   z-index:1;
 }
 
 .card.active{
   width: 150px;
   height: 290px;
-
   z-index:5;
-
   transform:
     translateY(-10px)
     scale(1.02);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .card:hover{
@@ -527,26 +469,17 @@ textarea#waMessage:focus {
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-
   z-index:20;
-
   width:44px;
   height:44px;
-
   border:none;
   border-radius:50%;
-
   background:rgba(255,255,255,0.85);
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   cursor:pointer;
-
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.12);
-
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   backdrop-filter: blur(10px);
 }
 
@@ -566,242 +499,454 @@ textarea#waMessage:focus {
 /* --- SECCIÓN QUÉ HACEMOS --- */
 
 .what-we-do {
-    background-color: #ecf7ff;
-    background-image: url('../assets/bg/cab_form.webp');
-    
-    /* Mantenemos la proporción original de la imagen */
-    background-size: contain; 
-    
-    /* La fijamos arriba para que las nubes y el corazón 
-       queden alineados cerca del título */
-    background-position: 50% 1.5rem;
-    
-    background-repeat: no-repeat;
-    
-    /* Ajusta el padding para que el contenido no tape la decoración de la imagen */
-    padding-top: 1.3rem; 
-    padding-bottom: rem;
-    text-align: center;
+  background-color: #ecf7ff;
+  background-image: url('../assets/bg/cab_form.webp');
+  background-size: contain; 
+  background-position: 50% 1.5rem;
+  
+  background-repeat: no-repeat;
+  
+  padding-top: 1.3rem; 
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .what-we-do h2 {
-    font-family: "Chewy", system-ui, sans-serif;
-    font-size: 2.2rem;
-    color: #ffffff;
-    -webkit-text-stroke: 12px #008f39;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-family: "Chewy", system-ui, sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
-    -webkit-text-stroke: 8px #1e4620;
-    paint-order: stroke fill;
+  -webkit-text-stroke: 6px #1c5a1b;
+  paint-order: stroke fill;
 
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wwd-grid {
-    display: grid;
-    /* 4 columnas siempre, pero muy compactas */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 0.2rem; /* Reducimos el hueco entre tarjetas */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 0.2rem;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.2rem; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.2rem;
+  width: 100%;
 }
 
 .wwd-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  width: 100%;
 }
 
 .wwd-card img {
-    width: 100%;            /* Permite que use el máximo del contenedor controlado por max-width */
-    max-width: 35px;       /* Controlas el tamaño real visual (puedes subirlo a 120px si las ves pequeñas) */
-    height: 35px;          /* Forzamos una altura fija para que todos los títulos empiecen exactamente en la misma línea */
-    object-fit: contain;    /* Mantiene la proporción de la ilustración de Canva sin deformarla */
-    object-position: bottom center; /* Apoya las imágenes en la base para que visualmente tengan coherencia */
-    margin-bottom: 0.2rem;
-    
-    /* Truco de renderizado para imágenes con transparencias/bordes suaves */
-    image-rendering: -webkit-optimize-contrast; 
-    transform: translateZ(0); /* Fuerza aceleración por hardware para suavizar bordes */
+  width: 100%;           
+  max-width: 35px;       
+  height: 35px;          
+  object-fit: contain;   
+  object-position: bottom center; 
+  margin-bottom: 0.2rem;
+  image-rendering: -webkit-optimize-contrast; 
+  transform: translateZ(0);
 }
 
 .wwd-card h3 {
-    font-family: "Sunborn", system-ui, sans-serif;
-    font-size: 0.5rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.2rem;
-    line-height: 1;
-    word-break: break-word;
-    text-align: center;
-    paint-order: stroke fill;
-    -webkit-text-stroke: 1px #2b2b2b;
+  font-family: "Sunborn", system-ui, sans-serif;
+  font-size: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+  word-break: break-word;
+  text-align: center;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 1px #2b2b2b;
 }
 
 .wwd-card p {
-    font-family: "Chewy", system-ui, sans-serif;
-    font-size: 0.55rem;
-    color: #4a753c;
-    line-height: 1.1;
-    text-align: center;
-    max-width: 100%;
-    padding: 0 2px;;
-    margin-top: 0.4rem;
-     /* Para asegurar que el texto se centre debajo del título incluso si es más corto */
+font-family: "Chewy", system-ui, sans-serif;
+font-size: 0.55rem;
+color: #1c5a1b;
+line-height: 1;
+text-align: justify;     
+text-justify: inter-word;
+max-width: 100%;
+padding: 0 2px;;
+margin-top: 0.8rem;
+margin: 0 auto;
 }
 
 
 /* --- Formulario --- */
-.Formulario { /* El fondo azul claro de tu web */
-    padding: 5.5rem 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: none;
-    background-image: url('../assets/bg/form2.webp');
-    background-size: cover;
-    background-position: center center;
-    background-size:105%  95%;
-    position: relative;
-    z-index: 1;
+.Formulario {
+padding: 5.5rem 1rem;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: none;
+background-image: url('../assets/bg/bgform.webp');
+background-size: cover;
+background-position: center center;
+background-size:105%  95%;
+position: relative;
+z-index: 1;
 }
 
-/* --- TÍTULO DE LA SECCIÓN --- */
 .Formulario h2 {
-    font-family: "Chewy", system-ui, sans-serif;
-    font-size: 1.8rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    
-    paint-order: stroke fill;
-    -webkit-text-stroke: 8px #1e4620; /* Tu verde oscuro característico */
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
+font-family: "Chewy", system-ui, sans-serif;
+font-size: 1.8rem;
+color: #ffffff;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 6px #1c5a1b;
+font-smooth: always;
+-webkit-font-smoothing: antialiased;
 }
 
-/* --- LA TARJETA BLANCA (El contenedor del Form) --- */
 .Formulario form {  
-  background-color:transparent !important; /* Fondo transparente para que se vea la marca de agua */
-  padding: 1.5rem 1rem;
-  border-radius: 4px; /* Bordes sutiles como en la captura */
-  width: 100%;
-  max-width: 550px; /* Ancho máximo para que no se estire demasiado */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Sombra muy suave */
-  
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem; /* Espaciado uniforme entre los inputs */
-  
-  /* TRUCO: Posicionamiento relativo para la marca de agua de fondo */
-  position: relative;
-  z-index: 1;
+background-color:transparent;
+background-image: url('../assets/bg/bgform2.webp');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+padding: 1.5rem 1rem;
+border-radius: 4px;
+width: 100%;
+max-width: 550px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+display: flex;
+flex-direction: column;
+gap: 0.9rem;
+position: relative;
+z-index: 1;
 }
 
-/* --- MARCA DE AGUA (Arcoíris de fondo en el formulario) --- */
 .Formulario form::before {
-    content: "";
-    position: absolute;
-    
-    /* Centramos el contenedor al 100% del formulario */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* Ruta de la imagen */
-    background: #ffffff url('../assets/img/fondo_form.webp');
-    background-repeat: no-repeat;
-    
-    /* Clave: Centrar la imagen dentro del formulario */
-    background-position: center center;
-    
-    /* Clave: 'contain' hará que la imagen se vea completa 
-       sin importar el tamaño del formulario */
-    background-size: contain;
-    
-    /* Opacidad y capas */
-    opacity: 0.3; 
-    z-index: -1; 
-    pointer-events: none;
-    
-    /* Quita el borde rojo una vez que confirmes que se ve la imagen */
-    /* border: 2px dashed red; */ 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff url('../assets/img/fondo_form.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.3; 
+  z-index: -1; 
+  pointer-events: none;
+     
 }
 
-/* --- ESTILO DE LOS INPUTS Y TEXTAREA --- */
 .Formulario form input,
 .Formulario form textarea {
-    width: 100%;
-    padding: 0.7rem 0.9rem;
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-    font-family: system-ui, sans-serif; /* Tipografía limpia para los datos */
-    font-size: 0.95rem;
-    color: #333333;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para que deje ver el fondo */
-    outline: none;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-/* Color del placeholder gris suave */
 .Formulario form input::placeholder,
 .Formulario form textarea::placeholder {
-    color: #9c9c9c;
+  color: #9c9c9c;
 }
 
-/* Enfoque al hacer clic en un campo */
 .Formulario form input:focus,
 .Formulario form textarea:focus {
-    border-color: #e2b442; /* Cambia al color dorado del botón al escribir */
+  border-color: #e2b442;
 }
 
-/* Tamaño fijo para el cuadro de mensaje */
 .Formulario form textarea {
-    height: 90px;
-    resize: none; /* Evita que el usuario lo deforme */
+  height: 90px;
+  resize: none;
 }
 
 /* --- BOTÓN ENVIAR --- */
 .Formulario form button {
-    width: 100%;
-    background-color: #e2b442; /* El amarillo/dorado tostado de tu captura */
-    color: #ffffff;
-    border: none;
-    padding: 0.8rem;
-    font-family: "Chewy", system-ui, sans-serif; /* Tu fuente divertida */
-    font-size: 1.15rem;
-    letter-spacing: 1px;
-    border-radius: 25px; /* Botón completamente redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-top: 0.2rem;
+  width: 100%;
+  background-color: #e2b442;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem;
+  font-family: "Chewy", system-ui, sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 0.2rem;
 }
 
-/* Efectos para el botón */
 .Formulario form button:hover {
-    background-color: #d1a333; /* Un punto más oscuro al pasar el ratón */
+    background-color: #d1a333;
 }
 
 .Formulario form button:active {
-    transform: scale(0.98); /* Pequeño efecto de hundido al pulsar */
+    transform: scale(0.98);
+}
+
+/* = SECCIÓN OPINIONES (Estilo Tablón Canva) = */
+
+.opinions-section {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-color: #ecf7ff;
+  background-image: url("../assets/bg/opinions.webp");
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+  background-position: top center;
+  padding: 3.5rem 1rem 5rem 1rem; 
+}
+
+.opinions-section h2 {
+  font-family: "Chewy", system-ui, sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  -webkit-text-stroke: 5px #1c8241;
+  paint-order: stroke fill;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0; 
+  margin-bottom: 2rem;
+}
+
+.opinions-container {
+  display: block; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.opinion-card {
+  display: block;
+  width: 85%;
+  max-width: 180px;
+  margin: 0 auto 0.4rem auto;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.opinion-card img {
+  width: 100%;
+  height: auto;
+  display: block; 
+  border-radius: 2px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-left { transform: rotate(-1deg); }
+.card-right { transform: rotate(1deg); }
+.card-straight { transform: rotate(0deg); }
+
+.opinion-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 5;
+}
+    
+.opinion-card:hover img {
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================================
+   PIE DE PÁGINA (Footer) - Mobile First
+   =================================================== */
+
+.main-footer {
+    background-color: #a4d45c; /* El verde manzana de la captura */
+    padding: 3rem 1.5rem;
+    color: #333333;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    font-family: "Chewy", system-ui, sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    -webkit-text-stroke: 1.5px #4a7c14; /* Silueta oscura para que destaque igual que arriba */
+    paint-order: stroke fill;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Estilos Columna 1: Ubicación --- */
+.map-wrapper {
+    max-width: 260px;
+    margin: 0 auto 1rem auto;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.address {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* --- Estilos Columna 2: Horarios --- */
+.hours-block {
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hours-block h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #4a7c14;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.hours-row span:first-child {
+    font-weight: 600;
+}
+
+/* --- Estilos Columna 3: Contacto --- */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 280px;
+    text-align: left;
+}
+
+.contact-list li {
+    margin-bottom: 0.8rem;
+}
+
+.contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+    color: #ffffff;
+}
+
+.contact-list img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 /* =========================
    VERSION ESCRITORIO (Desktop)
    ========================= */
 
+@media (min-width: 480px) {
+  .wa-chatbox {
+    bottom: 100px;
+    left: auto;       
+    right: 20px;      
+    width: 360px;     
+  }
+    
+  .wa-body {
+    max-height: 65vh;
+  }
+}
+
+/* Desde 600px en adelante */
+@media (min-width: 600px) {
+  .wwd-grid { gap: 1.5rem; }
+  .wwd-card img {
+    max-width: 80px;
+    height: 80px;
+  }
+  .wwd-card h3 { font-size: 0.8rem; }
+  .wwd-card p { 
+    display: block;
+    font-size: 0.7rem; 
+  }
+}
+
+/* Desde 768px en adelante (Tablets y Escritorio Mediano) */
+@media (min-width: 768px) {
+  .opinions-section {
+    background-size: cover;
+    background-position: center center;
+    padding: 6rem 2rem;
+  }
+
+  .opinions-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  /* Reactivamos la cuadrícula de Canva para pantallas grandes */
+  .opinions-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+  }
+
+  .opinion-card {
+    width: auto;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  /* Efecto collage a tope */
+  .card-left { transform: rotate(-2.5deg); }
+  .card-right { transform: rotate(2deg); }
+  .card-straight { transform: rotate(-0.5deg); }
+}
+
+/* Desde 1024px en adelante (Pantallas de PC grandes) */
 @media (min-width: 1024px) {
   .hero {
     height: 80vh;
@@ -832,29 +977,32 @@ textarea#waMessage:focus {
     font-size: 1.3rem;
     max-width: 900px;
   }
+}
+@media (min-width: 768px) {
+    .main-footer {
+        padding: 4rem 2rem;
+    }
 
-}
-@media (min-width: 480px) {
-    .wa-chatbox {
-        bottom: 100px; /* Asegúrate de actualizarlo también aquí para las pantallas de PC */
-        left: auto;       
-        right: 20px;      
-        width: 360px;     
+    /* Pasamos a las 3 columnas en horizontal de la imagen image_90958a.png */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
-    
-    .wa-body {
-        max-height: 65vh; /* En pantallas grandes nos podemos estirar un poco más */
+
+    .footer-column {
+        flex: 1;
+        text-align: center; /* Alinea los h3 centrados */
     }
-}
-@media (min-width: 600px) {
-    .wwd-grid { gap: 1.5rem; } /* Más aire cuando hay espacio */
-    .wwd-card img {
-        max-width: 80px;
-        height: 80px;
+
+    .map-wrapper {
+        max-width: 100%;
     }
-    .wwd-card h3 { font-size: 0.8rem; }
-    .wwd-card p { 
-        display: block;
-        font-size: 0.7rem; 
+
+    /* En Pc quitamos el auto-centrado para que queden mejor encajados */
+    .hours-block, .contact-list {
+        max-width: 100%;
+        padding-left: 15%; /* Un poco de sangría para que queden estéticos */
     }
 }
