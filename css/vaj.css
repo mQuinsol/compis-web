@@ -1,0 +1,454 @@
+/* =============================================
+   VAJ — Ven a jugar
+   Mobile first
+============================================= */
+
+/* =============================================
+   HERO
+============================================= */
+.vaj-hero {
+    position: relative;
+    aspect-ratio: 394 / 330;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+.vaj-hero__bg {
+    position: absolute;
+    inset: 0;
+}
+
+.vaj-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.vaj-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.02) 0%,
+        rgba(0,0,0,.05) 40%,
+        rgba(0,0,0,.35) 100%
+    );
+}
+
+.vaj-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+}
+
+.vaj-hero__title {
+    font-family: var(--font-accent);
+    font-size: 2.4rem;
+    color: var(--text-light);
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+.vaj-hero__subtitle {
+    font-family: var(--font-base);
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    opacity: .92;
+    text-align: center;
+}
+
+.vaj-hero__cta {
+    display: inline-block;
+    align-self: center;
+    background: var(--green-dark);
+    color: var(--text-light);
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .95rem;
+    padding: .65rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.vaj-hero__cta:hover {
+    background: var(--green-primary);
+}
+
+/* =============================================
+   FEATURES
+============================================= */
+.vaj-features {
+    padding: 2.5rem 1.25rem 2rem;
+    text-align: center;
+}
+
+.vaj-features__title {
+    font-family: var(--font-accent);
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    line-height: 1.35;
+    margin-bottom: 2rem;
+}
+
+.vaj-features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vaj-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+}
+
+.vaj-feature__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f0f9e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    margin-bottom: .25rem;
+}
+
+.vaj-feature__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.vaj-feature__desc {
+    font-family: var(--font-base);
+    font-size: .78rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* =============================================
+   TARIFAS
+============================================= */
+.vaj-tarifas {
+    padding: 2rem 1.25rem;
+    background: var(--lightblue);
+}
+
+.vaj-tarifas__title {
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.vaj-tarifas__title i {
+    font-size: 1rem;
+    color: var(--yellow-primary);
+}
+
+.vaj-tarifas__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+}
+
+/* Bono card */
+.vaj-bono {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background: #fff;
+}
+
+.vaj-bono__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    padding: .6rem .5rem;
+    font-family: var(--font-accent);
+    font-size: .85rem;
+    line-height: 1.15;
+    letter-spacing: .01em;
+    background: var(--bono-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.vaj-bono--verano .vaj-bono__header {
+    background: var(--green-dark);
+    color: var(--text-light);
+}
+
+.vaj-bono--escolar .vaj-bono__header {
+    background: #7b68c8;
+    color: var(--text-light);
+}
+
+.vaj-bono__list {
+    list-style: none;
+    padding: .5rem .5rem .75rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.vaj-bono__item {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .5rem .4rem;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.vaj-bono__badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-size: .65rem;
+    flex-shrink: 0;
+    color: #fff;
+    background: var(--bono-color);
+}
+
+.vaj-bono--verano .vaj-bono__badge {
+    background: var(--green-dark);
+}
+
+.vaj-bono--escolar .vaj-bono__badge {
+    background: #7b68c8;
+}
+
+.vaj-bono__label {
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: .68rem;
+    line-height: 1.1;
+    color: var(--text-dark);
+    flex: 1;
+}
+
+.vaj-bono__price {
+    font-family: var(--font-accent);
+    font-size: .82rem;
+    color: var(--bono-color);
+    flex-shrink: 0;
+}
+
+.vaj-bono--escolar .vaj-bono__price {
+    color: #7b68c8;
+}
+
+.vaj-tarifas__nocturna {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    max-width: 250px;
+    margin: 1rem auto 0;
+    padding: .75rem 1rem;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: var(--shadow-card);
+}
+
+.vaj-tarifas__nocturna::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    border-radius: 16px 0 0 16px;
+    background: linear-gradient(to bottom, var(--green-dark) 50%, #7b68c8 50%);
+}
+
+.vaj-tarifas__nocturna i {
+    font-size: 1.1rem;
+    color: var(--green-dark);
+}
+
+.vaj-tarifas__nocturna-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-size: .65rem;
+    flex-shrink: 0;
+    color: #fff;
+    background: var(--yellow-primary);
+}
+
+.vaj-tarifas__nocturna-label {
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: .85rem;
+    color: var(--text-dark);
+}
+
+.vaj-tarifas__nocturna-price {
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    color: var(--green-dark);
+}
+
+/* =============================================
+   CÓMO FUNCIONA
+============================================= */
+.vaj-como {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+.vaj-como__title {
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}
+
+.vaj-como__title i {
+    color: var(--yellow-primary);
+    font-size: 1rem;
+}
+
+.vaj-como__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vaj-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    max-width: 220px;
+}
+
+.vaj-paso--arrow {
+    color: var(--green-primary);
+    font-size: 1.2rem;
+    transform: rotate(90deg);
+    max-width: unset;
+}
+
+.vaj-paso__num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green-dark);
+    color: #fff;
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vaj-paso__num--2 {
+    background: var(--yellow-primary);
+    color: var(--text-dark);
+}
+
+.vaj-paso__num--3 {
+    background: var(--green-primary);
+}
+
+.vaj-paso__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--text-dark);
+}
+
+.vaj-paso__desc {
+    font-family: var(--font-base);
+    font-size: .8rem;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* =============================================
+   GALERÍA
+============================================= */
+.vaj-galeria {
+    padding: 0 0 2rem;
+}
+
+.vaj-galeria__list {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+    padding: 0 1.25rem;
+    margin: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.vaj-galeria__list::-webkit-scrollbar {
+    display: none;
+}
+
+.vaj-galeria__item {
+    flex: 0 0 calc(33.333% - .35rem);
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+}
+
+.vaj-galeria__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

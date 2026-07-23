@@ -1,0 +1,542 @@
+/* =============================================
+   CAMPAMENTOS.CSS
+   Estilos específicos para campamentos.html
+   ============================================= */
+
+
+/* ----- HERO CAMPAMENTOS ----- */
+.camp-hero {
+    background: var(--lightblue);
+    padding: 5.75rem 1.4rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.camp-hero__text {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.camp-hero__title {
+    font-family: var(--font-title);
+    color: var(--green-dark);
+    font-size: 2.2rem;
+    margin: 0 0 0.4rem;
+}
+
+.camp-hero__subtitle {
+    font-family: var(--font-base);
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ----- ICONOS DE CONFIANZA ----- */
+.camp-trust {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.camp-trust__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    flex: 1;
+}
+
+.camp-trust__item i {
+    font-size: 1.5rem;
+    color: #7c5cbf;
+    background: #fff;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+}
+
+.camp-trust__item span {
+    font-family: var(--font-base);
+    font-size: 0.7rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+/* ----- ENCABEZADO ACORDEÓN ----- */
+.camp-accordion__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.camp-accordion__header p {
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0.1rem 0 0;
+    text-align: center;
+}
+
+.camp-accordion__star {
+    font-size: 1.1rem;
+}
+
+.camp-accordion__title {
+    font-family: var(--font-base);
+    font-weight: 700;
+    color: var(--green-dark);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* ----- ACORDEÓN ----- */
+.camp-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.camp-accordion__item {
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.camp-accordion__body {
+    display: none;
+    padding: 0 1rem 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.camp-accordion__item[data-camp="verano"] .camp-accordion__body {
+    background: #fafaf8;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+    padding: 0.75rem 1rem 1rem;
+}
+
+.camp-accordion__item[data-camp="verano"] .camp-accordion__img {
+    object-position: center 0%;
+}
+.camp-accordion__item[data-camp="carnaval"] .camp-accordion__img {
+    object-position: center 0%;
+}
+.camp-accordion__item[data-camp="semana-santa"] .camp-accordion__img {
+    object-position: center 0%;
+}
+.camp-accordion__item[data-camp="navidad"] .camp-accordion__img {
+    object-position: center 0%;
+}
+
+.camp-accordion__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.camp-accordion__icon {
+    font-size: 1.2rem;
+}
+
+.camp-accordion__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green-dark);
+    flex: 1;
+}
+
+.camp-accordion__arrow {
+    color: var(--green-dark);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.camp-accordion__trigger[aria-expanded="true"] .camp-accordion__arrow {
+    transform: rotate(180deg);
+}
+
+/* Colores por campamento */
+.camp-accordion__item[data-camp="verano"] .camp-accordion__trigger {
+    background: linear-gradient(90deg, #fff9e6);
+}
+.camp-accordion__item[data-camp="carnaval"] .camp-accordion__trigger {
+    background: linear-gradient(90deg, #fff0f5);
+}
+.camp-accordion__item[data-camp="semana-santa"] .camp-accordion__trigger {
+    background: linear-gradient(90deg, #f0fff4);
+}
+.camp-accordion__item[data-camp="navidad"] .camp-accordion__trigger {
+    background: linear-gradient(90deg, #f0f8ff);
+}
+
+.camp-accordion__body {
+    display: none;
+    padding: 0 1rem 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.camp-accordion__body.is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-accordion__content-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding-top: .5rem;
+}
+
+.camp-accordion__img-wrap {
+    flex: 0 0 45%;
+    border-radius: calc(var(--card-radius) - 4px);
+    overflow: hidden;
+    align-self: center;
+}
+
+.camp-accordion__img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.camp-accordion__list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.camp-accordion__list li {
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.camp-accordion__list li i {
+    color: var(--green-dark);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* ----- LIGHTBOX PDF ----- */
+.pdf-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.pdf-lightbox.is-open {
+    display: flex;
+}
+
+.pdf-lightbox__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.pdf-lightbox__img {
+    max-width: 100%;
+    border-radius: var(--card-radius);
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+.pdf-lightbox__prev,
+.pdf-lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    z-index: 1001;
+}
+
+.pdf-lightbox__prev { left: 1rem; }
+.pdf-lightbox__next { right: 1rem; }
+
+/* ----- SEPARADOR WAVE ----- */
+.wave--camp-to-dsc {
+    background: var(--lightblue);
+}
+
+/* ----- SECCIÓN DÍAS SIN COLE ----- */
+.dsc {
+    background: #ede8ff;
+    padding: 2rem 1.4rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.dsc__text {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.dsc__title {
+    font-family: var(--font-title);
+    color: var(--green-dark);
+    font-size: 2rem;
+    margin: 0 0 0.4rem;
+}
+
+.dsc__subtitle {
+    font-family: var(--font-base);
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ----- ICONOS DSC ----- */
+.dsc__icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.dsc__icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    width: calc(20% - 0.6rem);
+    min-width: 3.5rem;
+}
+
+.dsc__icon-item i {
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    background: #fff;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+}
+
+.dsc__icon-item span {
+    font-family: var(--font-base);
+    font-size: 0.68rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+/* ----- CARRUSEL DSC ----- */
+.dsc__carousel {
+    position: relative;
+    margin-bottom: 1.75rem;
+}
+
+.dsc__carousel-track-wrap {
+    overflow: hidden;
+    border-radius: var(--card-radius);
+}
+
+.dsc__carousel-track {
+    display: flex;
+    transition: transform 0.35s ease;
+}
+
+.dsc__carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.dsc__carousel-slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--card-radius);
+}
+
+.dsc__carousel-placeholder {
+    height: 180px;
+    background: #d9d0f5;
+    border-radius: var(--card-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsc__carousel-placeholder span {
+    font-family: var(--font-base);
+    color: #7c5cbf;
+    font-size: 0.9rem;
+}
+
+.dsc__carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    z-index: 2;
+    color: var(--green-dark);
+    font-size: 0.8rem;
+}
+
+.dsc__carousel-btn--prev { left: 0.4rem; }
+.dsc__carousel-btn--next { right: 0.4rem; }
+
+.dsc__carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.dsc__carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c9b8f0;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.dsc__carousel-dots .dot.is-active {
+    background: #7c5cbf;
+}
+
+/* ----- CTA VISITA ----- */
+.dsc__cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--green-dark);
+    color: #fff;
+    border-radius: 50px;
+    padding: .65rem .85rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: opacity 0.2s;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dsc__cta:hover {
+    opacity: 0.88;
+}
+
+.dsc__cta > i {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.dsc__cta-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dsc__cta-title {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.dsc__cta-sub {
+    font-family: var(--font-base);
+    font-size: 0.78rem;
+    opacity: 0.85;
+}
+
+.dsc__cta-arrow {
+    font-family: var(--font-base);
+    font-size: 0.78rem;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+.dsc__cta-arrow {
+    background: #fff;
+    color: var(--green-dark);
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.4rem 0.65rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ----- CIERRE SECCIÓN ----- */
+.dsc__closing {
+    font-family: var(--font-base);
+    font-weight: 700;
+    color: var(--green-dark);
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}

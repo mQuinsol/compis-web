@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cumpleaños - Compis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cumples.css">
+</head>
+
+<body>
+
+    <!-- WhatsApp flotante -->
+    <a class="whatsapp-float" id="waToggle">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+        <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
+        <div class="wa-body">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button id="waSend">Enviar</button>
+                </div>
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34986066863" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="site-header">
+        <div class="announcement-bar">
+            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+        </div>
+        <nav class="navbar">
+            <div class="navbar__actions">
+                <a href="../index.html" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                </a>
+                <div class="navbar__socials-wrapper">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="navbar__overlay"></div>
+            <div class="navbar__drawer" id="mobile-drawer">
+                <ul class="drawer__menu">
+                    <li class="item-campamentos">
+                        <a href="campamentos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                            <span class="drawer__label">Campamentos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-cumpleanios">
+                        <a href="cumples.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <span class="drawer__label">Cumpleaños</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-fiestas">
+                        <a href="fiestas-y-eventos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                            <span class="drawer__label">Fiestas y Eventos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-excursiones">
+                        <a href="excursiones.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                            <span class="drawer__label">Excursiones</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-jugar">
+                        <a href="acceso-por-horas.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                            <span class="drawer__label">Acceso por horas</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-nosotras">
+                        <a href="nosotras.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                            <span class="drawer__label">Nosotras</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="cumples-hero">
+        <div class="cumples-hero__text">
+            <h1>Celebra un cumpleaños inolvidable</h1>
+            <p>Diversión segura para todas las edades</p>
+            <div class="cumples-hero__ctas">
+                <a href="#reservar" class="btn btn--green">🎂 Reservar</a>
+                <a href="#" class="btn btn--outline">📄 Doc_Info</a>
+            </div>
+        </div>
+        <div class="cumples-hero__img">
+            <img src="../assets/images/cumples/cumples-hero.webp" alt="Fiesta de cumpleaños">
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-hero" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <!-- ===== TARIFAS ===== -->
+    <section class="cumples-tarifas" id="tarifas">
+        <h2 class="section-title">✨ Tarifas</h2>
+        <div class="cumples-tarifas__grid">
+
+            <div class="tarifa-card tarifa-card--diurno">
+                <div class="tarifa-card__header">
+                    <span class="tarifa-card__icon">☀️</span>
+                    <h3>Diurno</h3>
+                    <p class="tarifa-card__sub">mín. 10 niños</p>
+                </div>
+                <ul class="tarifa-card__list">
+                    <li><span>2 horas</span><span>10€ / niño</span></li>
+                    <li><span>3 horas + 1 actividad</span><span>12% u/ñ</span></li>
+                    <li><span>4 horas + 2 actividades</span><span>18€ / niño</span></li>
+                </ul>
+                <a href="#" class="btn btn--green btn--sm">Ver menú</a>
+            </div>
+
+            <div class="tarifa-card tarifa-card--nocturno">
+                <div class="tarifa-card__header">
+                    <span class="tarifa-card__icon">🌙</span>
+                    <h3>Nocturno</h3>
+                    <p class="tarifa-card__sub">mín. 6 niños</p>
+                </div>
+                <ul class="tarifa-card__list">
+                    <li><span>3 horas + 1 actividad</span><span>20€ / niño</span></li>
+                    <li><span>Fiesta Pijama (12h a 10h)</span><span>40€ / niño</span></li>
+                </ul>
+                <a href="#" class="btn btn--yellow btn--sm">Ver menú</a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-tarifas" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#f9f5ff"/>
+        </svg>
+    </div>
+
+    <!-- ===== EXTRAS ===== -->
+    <section class="cumples-extras" id="extras">
+        <h2 class="section-title">🎈 Extras</h2>
+        <div class="cumples-extras__grid">
+            <div class="extra-card">
+                <img src="../assets/images/cumples/decoracion.webp" alt="Decoración">
+                <p class="extra-card__name">Decoración</p>
+                <p class="extra-card__price">10€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/oblea.webp" alt="Oblea">
+                <p class="extra-card__name">Oblea</p>
+                <p class="extra-card__price">9€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/pinata.webp" alt="Pinata">
+                <p class="extra-card__name">Piñata</p>
+                <p class="extra-card__price">50€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/animacion.webp" alt="Animación">
+                <p class="extra-card__name">Animación</p>
+                <p class="extra-card__price">+26€/h</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/payaso.webp" alt="Payaso / Maga">
+                <p class="extra-card__name">Payaso / Maga</p>
+                <p class="extra-card__price">+86€/h</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/pintacaras.webp" alt="Pintacaras">
+                <p class="extra-card__name">Pintacaras</p>
+                <p class="extra-card__price">+3€</p>
+            </div>
+        </div>
+        <p class="cumples-extras__nota">Contrataciones externas: Precio sujeto a disponibilidad</p>
+    </section>
+
+    <div class="wave-divider wave--cumples-extras" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <!-- ===== MENÚS ===== -->
+    <section class="cumples-menus" id="menus">
+        <h2 class="section-title">🍽️ Menús</h2>
+        <div class="cumples-menus__accordion">
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>🍔 Merienda</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <p>Contenido del menú merienda...</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>🍕 Cena</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <p>Contenido del menú cena...</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>🎂 Tartas</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <p>Contenido del menú tartas...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-menus" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#f9f5ff"/>
+        </svg>
+    </div>
+    
+    <!-- ===== INFORMACIÓN ===== -->
+    <section class="cumples-info" id="informacion">
+        <h2 class="section-title">ℹ️ Información</h2>
+        <div class="cumples-info__grid">
+            <div class="info-card">
+                <img src="../assets/images/cumples/zone.webp" alt="Instalaciones">
+                <div class="info-card__text">
+                    <h4>Instalaciones seguras</h4>
+                    <p>Espacios amplios, limpios y adaptados para que los niños jueguen con total seguridad y tranquilidad.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card__text">
+                    <h4>Comodidad para todas las familias</h4>
+                    <p>Zona para adultos, servicio de bebidas y un ambiente para toda la ocasión para que disfrutes.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card__text">
+                    <h4>Puntualidad y organización</h4>
+                    <p>Te recomendamos llegar con 15 minutos de antelación para preparar todo y comenzar puntualmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVAR ===== -->
+    <section class="cumples-reservar" id="reservar">
+        <h2 class="section-title">🎂 Reserva tu cumpleaños</h2>
+        <p>Contacta con nosotros para disponibilidad y más información.</p>
+        <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" class="btn btn--green">
+            💬 Escribir por WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer__main">
+            <div class="footer__map-wrapper">
+                <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11784.02200793834!2d-8.818037036954513!3d42.4063278574475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f69734824903b%3A0x5df874eba60c0973!2sCOMPIS%3A%20Ludoteca%20y%20Eventos%20Infantiles!5e0!3m2!1ses!2ses!4v1781715408505!5m2!1ses!2ses"
+                        width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" tabindex="-1">
+                    </iframe>
+                    <span class="footer__map-label">
+                        <i class="fa-solid fa-location-dot"></i> Cómo llegar
+                    </span>
+                </a>
+            </div>
+            <p class="footer__address">Paseo Playa de Silgar nº66, Bajo · Sanxenxo</p>
+            <div class="footer__hours">
+                <p><strong>Escolar:</strong> M–D · 16:30–20:30h</p>
+                <p><strong>Vacacional:</strong> L–V · 9–14h & 16:30–21h</p>
+            </div>
+            <div class="footer__actions">
+                <div class="footer__actions-group">
+                    <a href="tel:986066863" class="footer__icon-btn" aria-label="Llamar">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" class="footer__icon-btn" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="footer__actions-group">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" target="_blank" rel="noopener noreferrer" class="footer__icon-btn" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Compis-Ludoteca/100081051092342/" target="_blank" rel="noopener noreferrer" class="footer__icon-btn" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__legal">
+            <a href="/privacidad.html">Política de privacidad</a>
+            <span>·</span>
+            <a href="/cookies.html">Cookies</a>
+            <span>·</span>
+            <a href="/aviso-legal.html">Aviso legal</a>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/cumples-main.js"></script>
+</body>
+</html>
