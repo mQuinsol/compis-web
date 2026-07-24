@@ -50,10 +50,19 @@
 
 .fye-hero__title {
     font-family: var(--font-accent);
-    font-size: 2.6rem;
-    color: var(--text-light);
+    font-size: 2.4rem;
+    color: #B89FE8;
     line-height: 1.05;
-    text-shadow: 0 2px 8px rgba(0,0,0,.3);
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .fye-hero__subtitle {

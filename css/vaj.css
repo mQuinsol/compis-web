@@ -54,10 +54,19 @@
 .vaj-hero__title {
     font-family: var(--font-accent);
     font-size: 2.4rem;
-    color: var(--text-light);
+    font-weight: 700;
+    color: #6FAE7F; /* verde menta claro */
     line-height: 1.1;
-    text-shadow: 0 2px 8px rgba(0,0,0,.3);
     text-align: center;
+    margin: 0;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .vaj-hero__subtitle {

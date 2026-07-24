@@ -20,36 +20,38 @@
     text-align: center;
     overflow: hidden;
     border-radius: 0 0 var(--radius-card) var(--radius-card);
+    display: flex;
+    align-items: center;
 }
 
 .exc-hero__title {
-    font-family: var(--font-title);
-    color: #fff;
-    font-size: 1.9rem;
+    font-family: var(--font-accent);
+    color: #4A9FD8;
+    font-size: 2.4rem;
     line-height: 1.2;
-    margin: 100px 0 1.25rem;
+    margin: 0; /* antes: 100px 0 1.25rem */
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
-.exc-hero__title i {
-    font-size: 1.5rem;
-}
-
-.exc-hero__bubble {
-    position: relative;
-    background: var(--yellow-primary);
-    border-radius: 20px;
-    padding: .85rem 1.25rem;
-    max-width: 280px;
-    margin: 0 auto;
-}
-
-.exc-hero__bubble p {
+.exc-hero__subtitle {
     font-family: var(--font-base);
-    font-weight: 700;
-    color: #4a3b1e;
-    font-size: .92rem;
-    line-height: 1.4;
-    margin: 0;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 600;
+    text-align: center;
+    margin: .5rem 0 0;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ----- SECCIÓN CARACTERÍSTICAS ----- */

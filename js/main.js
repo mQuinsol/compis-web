@@ -4,11 +4,13 @@ import { initContact } from './contact.js';
 import { initGallery } from './gallery.js';
 import { initReview } from './review.js';
 import { initServices } from './services.js';
+import { initFooterHours } from './footer.js';
 initNavbar();
 initAssistant();
 initContact();
 initGallery();
 initReview();
+initFooterHours();
 initServices();
 
 const banner = document.getElementById('cookieBanner');

@@ -17,10 +17,19 @@
 }
 
 .camp-hero__title {
-    font-family: var(--font-title);
-    color: var(--green-dark);
-    font-size: 2.2rem;
+    font-family: var(--font-accent);
+    color: #fff1bf;
+    font-size: 2.4rem;
     margin: 0 0 0.4rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .camp-hero__subtitle {
@@ -470,7 +479,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--green-dark);
+    background: #8B6FC9;
     color: #fff;
     border-radius: 50px;
     padding: .65rem .85rem;
@@ -518,7 +527,7 @@
 
 .dsc__cta-arrow {
     background: #fff;
-    color: var(--green-dark);
+    color: #6B4C9A;
     font-family: var(--font-base);
     font-weight: 700;
     font-size: 0.78rem;
@@ -534,7 +543,7 @@
 .dsc__closing {
     font-family: var(--font-base);
     font-weight: 700;
-    color: var(--green-dark);
+    color: #6B4C9A;
     text-align: center;
     font-size: 0.95rem;
     line-height: 1.5;
